@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    
+
+    <form class="formulario">
+
+        <h1 class="titulo">Reserva de Ticket</h1>
+
+        <label for="fname">Nombre</label>
+        <input class="anchoTexto" type="text" id="fname" name="fname" placeholder="" required
+            onblur="validarString(this)">
+
+        <label for="espectaculo">Espectaculo</label>
+        <select id="espectaculo">
+            <option disabled selected>Seleccionar</option>
+            <option>Super Humor</option>
+            <option>La historia del chip</option>
+            <option>Laberinto de los espejos</option>
+        </select>
+
+        <label for="fecha">Fecha</label>
+        <input class="anchoFH" type="date" id="fecha" name="fecha" required>
+
+        <label for="cantick">Cantidad de tickets</label>
+        <input class="anchoTexto" type="cant" id="cantick" name="cantick" placeholder="" required
+            onblur="validarTicket(this)">
+
+        <label for="email">Email</label>
+        <input class="anchoTexto" type="email" id="email" name="email" placeholder="" required
+            onchange="validarEmail(this)">
+
+        <input type="submit" value="Reservar" class="envio" onclick="mostrarReserva()">
+    </form>
+</body>
+</html>
